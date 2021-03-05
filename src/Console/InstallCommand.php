@@ -56,6 +56,7 @@ class InstallCommand extends Command
              'meilisearch',
              'mailhog',
              'selenium',
+             'pgadmin',
          ], 0, null, true);
     }
 
@@ -118,7 +119,7 @@ class InstallCommand extends Command
         } else {
             $environment = str_replace('DB_HOST=127.0.0.1', "DB_HOST=mysql", $environment);
         }
-        
+
         $environment = str_replace('MEMCACHED_HOST=127.0.0.1', 'MEMCACHED_HOST=memcached', $environment);
         $environment = str_replace('REDIS_HOST=127.0.0.1', 'REDIS_HOST=redis', $environment);
 
